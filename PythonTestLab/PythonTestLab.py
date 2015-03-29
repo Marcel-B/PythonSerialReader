@@ -53,12 +53,12 @@ while True:
         messwerte = SER.readlines();
         #SER.flushInput()
         print(messwerte)
-    
         if counter >= 250:
             for inhalt in messwerte:
                 if "x" not in inhalt:
                     print(str(inhalt))
                 else:
+
                     # wert einheit sensor ort
                     current = inhalt.split("x");
                     wert = current[0]
@@ -72,7 +72,6 @@ while True:
     except:
         print("Some shit happpens")
         SER = Connect()
-
 
 
 
